@@ -14,14 +14,11 @@ public class Combat
         Experience = rnd.Next(10, 50);
     }
     
-    
     public void Fight(Player player, Enemy enemy)
     {
         var random = new Random();
         bool combat = true;
         
-
-
         while (combat)
         {
             int playerDamage = random.Next(5, 20);
