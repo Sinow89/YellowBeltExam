@@ -10,7 +10,4 @@ public class Merchant : Character, IDialogue
     {
         Console.WriteLine($"{name} says: {dialogue}");
     }
-    
-
-  
 }
