@@ -1,6 +1,16 @@
 ﻿namespace YellowBeltExam;
 
-public class Merchant
+public class Merchant : Character
 {
+    public Merchant(string name, int health) : base(name, health)
+    {
+    }
     
+    public void Speak(string name, string dialogue)
+    {
+        Console.WriteLine($"{name} says: {dialogue}");
+    }
+    
+
+  
 }

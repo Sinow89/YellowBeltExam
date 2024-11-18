@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game", "Game.csproj", "{58618E9F-8288-41F4-8228-090F9FE5684E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YellowBeltExam", "YellowBeltExam.csproj", "{58618E9F-8288-41F4-8228-090F9FE5684E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
