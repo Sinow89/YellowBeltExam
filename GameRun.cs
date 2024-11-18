@@ -12,10 +12,7 @@ class GameRun
         Combat combat = new();
         NPC npc = new("NPC", 50);
         Merchant merchant = new("Merchant", 50);
-
-
-        Console.WriteLine($"A wild {enemy.Name} with {enemy.Health} health!");
-
+        
         
         var randomEncounter = new Random();
         int randomNumber = randomEncounter.Next(1, 4);
@@ -27,6 +24,7 @@ class GameRun
         switch (randomNumber)
         {
             case EnemyEncounter:
+                Console.WriteLine($"A wild {enemy.Name} with {enemy.Health} health!");
                 combat.Fight(player, enemy);
                 break;
             case NpcEncounter:
@@ -36,12 +34,6 @@ class GameRun
                 merchant.Speak("Merchant", "Hello stranger!");
                 break;
         }
-
-
-
-
-
-
-
+        
     }
 }
