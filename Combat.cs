@@ -22,12 +22,12 @@ public class Combat
         
 
 
-        while (combat == true)
+        while (combat)
         {
             int playerDamage = random.Next(5, 20);
             int enemyDamage = random.Next(1, 10);
 
-            Console.WriteLine("Choose an action:\n1. Attack\n2. Heal");
+            Console.WriteLine("Choose an action:\n1. Attack\n2. Heal\n3. Defend");
             string userInput = Console.ReadLine();
 
             if (userInput == "1")
@@ -43,12 +43,22 @@ public class Combat
                     player.Heal(random.Next(1, 20));
                 }
             }
+            else if (userInput == "3")
+            {
+                player.Health -= enemyDamage;
+            }
 
             player.Health -= enemyDamage;
             Console.WriteLine($"{enemy.Name} attacks the {player.Name} with {enemyDamage} damage");
             Console.WriteLine($"{player.Name}'s health: {player.Health}");
 
-
+            if (player.Health <= 0)
+            {
+                Console.WriteLine("No you died!");
+                Console.WriteLine("Game Over");
+                combat = false;
+            }
+            
             if (enemy.Health <= 0)
             {
                 Console.WriteLine($"Victory, you defeated the Goblin!");
