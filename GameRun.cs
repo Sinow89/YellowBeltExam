@@ -8,17 +8,14 @@ class GameRun
         string input = Console.ReadLine();
         
         Enemy enemy = new ("Goblin", 50);
-        var player = new Player(input, 10);
-        Combat combat = new();
+        var player = new Player(input, 50);
         NPC npc = new("NPC", 50);
         Merchant merchant = new("Merchant", 50);
-        
-
+        Combat combat = new();
         bool playerAlive = true;
-
+        
         while (playerAlive)
         {
-                    
             var randomEncounter = new Random();
             int randomNumber = randomEncounter.Next(1, 4);
 
@@ -39,7 +36,6 @@ class GameRun
                 case MerchantEncounter:
                     merchant.Speak("Merchant", "Hello stranger!");
                     break;
-                
             }
             
             if (player.Health <= 0)
@@ -48,8 +44,6 @@ class GameRun
             }
 
         }
-        
-
         
     }
 }
