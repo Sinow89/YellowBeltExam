@@ -16,12 +16,6 @@ public class Character : IAttacker
         Console.WriteLine($"{Name} attacks {target.Name} with {damage} damage");
     }
     
-    // private void TakeDamage(int damage)
-    // {
-    //     Health -= damage;
-    //     Console.WriteLine($"{Name} takes {damage} damage and has {Health} health left.");
-    // }
-
     public void Heal(int heal)
     {
         var random = new Random();
