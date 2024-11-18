@@ -49,6 +49,13 @@ public class Combat
                 Console.WriteLine("");
                 Thread.Sleep(1000);
             }
+            else
+            {
+                Console.WriteLine($"You fumbled and now you missed the {enemy.Name}...");
+                Thread.Sleep(1000);
+                Console.WriteLine("Don't do it again!!!");
+                Thread.Sleep(1000);
+            }
             
             if (player.Health <= 0)
             {
