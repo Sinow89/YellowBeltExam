@@ -19,7 +19,7 @@ public class Character : IAttacker
     public void Heal(int heal)
     {
         var random = new Random();
-        Console.WriteLine("Hero heals himself");
+        Console.WriteLine($"{Name} heals himself");
         Console.WriteLine($"{heal} points healed ");
         Health += heal;
         Console.WriteLine($"{Health} health points");

@@ -55,6 +55,7 @@ public class Combat
                 Thread.Sleep(1000);
                 Console.WriteLine("Don't do it again!!!");
                 Thread.Sleep(1000);
+                Console.WriteLine();
             }
             
             if (player.Health <= 0)
