@@ -13,7 +13,6 @@ public class Character : IAttacker
     
     public void Attack(Character target, int damage)
     {
-        // Health -= damage;
         Console.WriteLine($"{Name} attacks {target.Name} with {damage} damage");
     }
     
