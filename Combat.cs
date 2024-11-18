@@ -17,9 +17,8 @@ public class Combat
     public void Fight(Player player, Enemy enemy)
     {
         var random = new Random();
-        bool combat = true;
         
-        while (combat)
+        while (true)
         {
             int playerDamage = random.Next(5, 20);
             int enemyDamage = random.Next(1, 10);
@@ -50,16 +49,12 @@ public class Combat
                 Console.WriteLine("");
                 Thread.Sleep(1000);
             }
-
-            player.Health -= enemyDamage;
-            Console.WriteLine($"{enemy.Name} attacks the {player.Name} with {enemyDamage} damage");
-            Console.WriteLine($"{player.Name}'s health: {player.Health}");
-
+            
             if (player.Health <= 0)
             {
                 Console.WriteLine("No you died!");
                 Console.WriteLine("Game Over");
-                combat = false;
+                break;
             }
             
             if (enemy.Health <= 0)
@@ -67,8 +62,13 @@ public class Combat
                 Console.WriteLine($"Victory, you defeated the Goblin!");
                 Console.WriteLine($"{player.Name} gained {Experience} experience point");
                 enemy.Health = 50;
-                combat = false;
+                break;
             }
+            
+            player.Health -= enemyDamage;
+            Console.WriteLine($"{enemy.Name} attacks the {player.Name} with {enemyDamage} damage");
+            Console.WriteLine($"{player.Name}'s health: {player.Health}");
+            
         }
     }
 }
