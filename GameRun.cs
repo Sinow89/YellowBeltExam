@@ -1,9 +1,9 @@
 ﻿namespace YellowBeltExam;
 
-class Program
+class GameRun
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        
     }
 }
