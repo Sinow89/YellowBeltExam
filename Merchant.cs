@@ -1,6 +1,6 @@
 ﻿namespace YellowBeltExam;
 
-public class Merchant : Character
+public class Merchant : Character, IDialogue
 {
     public Merchant(string name, int health) : base(name, health)
     {

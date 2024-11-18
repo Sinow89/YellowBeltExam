@@ -2,5 +2,5 @@
 
 public interface IDialogue
 {
-    public void Speak(string dialogue);
+    public void Speak(string name,string dialogue);
 }

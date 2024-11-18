@@ -12,5 +12,4 @@ public class NPC : Character, IDialogue
         Console.WriteLine($"{name} says: {dialogue}");
     }
     
-
 }
