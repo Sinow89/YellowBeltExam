@@ -53,7 +53,8 @@ public class Combat
             {
                 Console.WriteLine($"Victory, you defeated the Goblin!");
                 Console.WriteLine($"{player.Name} gained {Experience} point");
-                break;
+                enemy.Health = 50;
+                combat = false;
             }
         }
     }
