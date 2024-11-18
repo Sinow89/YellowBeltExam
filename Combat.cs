@@ -32,17 +32,23 @@ public class Combat
                 player.Attack(enemy, playerDamage);
                 enemy.Health -= playerDamage;
                 Console.WriteLine($"{enemy.Name} {enemy.Health} health");
+                Console.WriteLine("");
+                Thread.Sleep(1000);
             }
 
             else if (userInput == "2")
             {
                 {
                     player.Heal(random.Next(1, 20));
+                    Console.WriteLine("");
+                    Thread.Sleep(1000);
                 }
             }
             else if (userInput == "3")
             {
                 player.Health -= enemyDamage;
+                Console.WriteLine("");
+                Thread.Sleep(1000);
             }
 
             player.Health -= enemyDamage;
@@ -59,7 +65,7 @@ public class Combat
             if (enemy.Health <= 0)
             {
                 Console.WriteLine($"Victory, you defeated the Goblin!");
-                Console.WriteLine($"{player.Name} gained {Experience} point");
+                Console.WriteLine($"{player.Name} gained {Experience} experience point");
                 enemy.Health = 50;
                 combat = false;
             }

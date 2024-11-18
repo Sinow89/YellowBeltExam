@@ -59,7 +59,7 @@ public class Merchant : Character, IDialogue
                     Console.WriteLine("Invalid selection or item not available.");
                 }
 
-                if (MerchantInventoryList.Count == 0)
+                if (MerchantInventoryList.Count <= 0)
                 {
                     Console.WriteLine("Merchant's inventory is now empty.");
                     Console.WriteLine("Thanks for buying all of my inventory!");

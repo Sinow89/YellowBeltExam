@@ -29,9 +29,14 @@ class GameRun
                     Console.WriteLine($"{input} says: Ready for battle!");
                     Console.WriteLine($"A wild {enemy.Name} with {enemy.Health} health!");
                     combat.Fight(player, enemy);
+                    Console.WriteLine("");
+                    Thread.Sleep(1000);
                     break;
                 case NpcEncounter:
-                    npc.Speak("NPC", "Hello stranger!");
+                    npc.Speak("Villager", "Hello stranger!");
+                    npc.Speak("Villager", "Don't get lost in the woods");
+                    Console.WriteLine("");
+                    Thread.Sleep(1000);
                     break;
                 case MerchantEncounter:
                     merchant.Speak("Merchant", "Hello stranger!");
