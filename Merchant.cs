@@ -63,6 +63,7 @@ public class Merchant : Character, IDialogue
                 {
                     Console.WriteLine("Merchant's inventory is now empty.");
                     Console.WriteLine("Thanks for buying all of my inventory!");
+                    Thread.Sleep(1000);
                     break;
                 }
             }
